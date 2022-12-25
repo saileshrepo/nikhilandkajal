@@ -21,7 +21,11 @@
  *
  */
 $(document).on('click', function(){
-    document.getElementById("my_audio").play();
+    let pauseStatus = document.getElementById("my_audio").paused
+    if(pauseStatus)
+        document.getElementById("my_audio").play();
+    else
+        document.getElementById("my_audio").pause();
     console.log('Shaadi me zaroor aana');
 });
 
